@@ -60,7 +60,7 @@ class Display {
       $list_items .= $this->create_slider_item();
     }
 
-    $body = '<br clear="all" />'
+    $body = '<br />'
           . '<br />'
           . '<br />'
           . '<div class="carouselFrame" id="carousel">'

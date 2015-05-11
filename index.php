@@ -81,7 +81,7 @@ $page_base = BASE_URL;
 // Init the display class and get the values.
 
 $DisplayClass = new Display();
-$body = $DisplayClass->set_body_content(72);
+$body = $DisplayClass->set_body_content(12);
 
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
