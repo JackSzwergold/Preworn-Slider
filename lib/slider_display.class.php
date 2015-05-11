@@ -30,8 +30,8 @@ class Display {
     $color_array = array('blue', 'gray', 'green', 'orange', 'purple', 'red');
     $color = $color_array[array_rand($color_array)];
 
-    $width = rand(120,360);
-    $height = rand(120,360);
+    $width = rand(100,240);
+    $height = rand(120,420);
 
     $ret = '<li>'
          . '<div class="Image">'
