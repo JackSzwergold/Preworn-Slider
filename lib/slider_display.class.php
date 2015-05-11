@@ -37,7 +37,7 @@ class Display {
          . '<div class="Image">'
          . '<div class="Padding">'
          . '<a href="http://www.preworn.com/">'
-         . sprintf('<img src="images/pixel_%s.gif" width="%d" height="%d" border="0" alt="" />', $color, $width, $height)
+         . sprintf('<img src="images/pixel_%s.gif" width="%d" height="%d" alt="" />', $color, $width, $height)
          . '</a>'
          . '<div class="HiddenText">'
          . '<p><i>Hello</i>, world!</p>'
