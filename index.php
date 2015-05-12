@@ -78,6 +78,11 @@ $page_title = ucwords(preg_replace('/_/', ' ', $page_title));
 $page_base = BASE_URL;
 
 //**************************************************************************************//
+// Set the page DIVs array.
+
+$page_divs_array = array();
+
+//**************************************************************************************//
 // Init the display class and get the values.
 
 $DisplayClass = new Display();
@@ -93,6 +98,7 @@ $frontendDisplayClass->setPageURL('http://www.preworn.com/slider/' . implode($ur
 $frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.');
 $frontendDisplayClass->setPageDescription('Some PHP classes to handle slider display stuff.');
 $frontendDisplayClass->setPageContent($body);
+$frontendDisplayClass->setPageDivs($page_divs_array);
 // $frontendDisplayClass->setPageDivWrapper('carouselFrame', 'carousel');
 $frontendDisplayClass->setPageRobots('noindex, nofollow');
 $frontendDisplayClass->setJavascripts(array('script/iscroll.js','script/preworn.helpers.js','script/preworn.slider.js','script/preworn.slider.settings.iscroll.js','script/preworn.slider.init.js'));
