@@ -32,7 +32,7 @@ class Display {
   private $width_max = 240;
 
   private $height_min = 120;
-  private $height_max = 420;
+  private $height_max = 400;
 
   /**************************************************************************************/
 
@@ -63,7 +63,7 @@ class Display {
     $height = rand($this->height_min, $this->height_max);
 
     $text = '<div class="HiddenText">'
-          . '<p><i>Hello</i>, world!</p>'
+          . '<p>A brilliant idea.</p>'
           . '</div><!-- .HiddenText -->'
           ;
 

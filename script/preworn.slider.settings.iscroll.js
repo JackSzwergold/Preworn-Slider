@@ -64,7 +64,7 @@ $(document).ready(function() {
     window.slider_params['slider_selector'] = 'div#carousel'; // selector for the slider
 
     window.slider_params['iscroll_mode'] = true; // if set to true it uses iScroll; otherwise it uses the jQuery functions
-    window.slider_params['show_labels'] = true; // shows a small index indicator label on each slide element for debugging
+    window.slider_params['show_labels'] = false; // shows a small index indicator label on each slide element for debugging
     window.slider_params['show_control_zones'] = false; // shows the control zones for debugging
 
     window.slider_params['slider_init_ratio'] = 0.5; // sets the initial position of the slider; 0 is left, 1 is right, 0.5 is halfway between

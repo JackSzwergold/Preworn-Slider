@@ -86,7 +86,7 @@ $page_divs_array = array();
 // Init the display class and get the values.
 
 $DisplayClass = new Display();
-$body = $DisplayClass->set_body_content(12);
+$body = $DisplayClass->set_body_content(144);
 
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
