@@ -69,7 +69,7 @@ class Display {
          . '<div class="Image">'
          . '<div class="Padding">'
          . '<a href="http://www.preworn.com/">'
-         . sprintf('<img src="images/pixel_%s.gif" width="%d" height="%d" alt="" />', $color, $width, $height)
+         . sprintf('<div style="background-color: %s; width: %dpx; height: %dpx"></div>', $color, $width, $height)
          . '</a>'
          . $text
          . '</div><!-- .Padding -->'
