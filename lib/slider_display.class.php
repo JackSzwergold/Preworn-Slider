@@ -23,15 +23,42 @@
 
 class Display {
 
+  private $color_array_source = array('blue', 'gray', 'green', 'orange', 'purple', 'red');
+  private $color_array = array();
+
+  private $width_min = 100;
+  private $width_max = 240;
+
+  private $height_min = 120;
+  private $height_max = 420;
+
   /**************************************************************************************/
 
-  public function create_slider_item ($color_array = array(), $width = 0, $height = 0) {
+  public function __construct() {
 
-    $color_array = array('blue', 'gray', 'green', 'orange', 'purple', 'red');
-    $color = $color_array[array_rand($color_array)];
+    // Init the color array based on the source values.
+    $this->color_array = $this->color_array_source;
 
-    $width = rand(100,240);
-    $height = rand(120,420);
+  } // __construct
+
+  /**************************************************************************************/
+
+  public function create_slider_item ($color_array_source = array(), $width = 0, $height = 0) {
+
+    // If the color array is empty, reload the source color values into the array.
+    if (empty($this->color_array)) {
+      $this->color_array = $this->color_array_source;
+    }
+
+    // Shuffle the array.
+    shuffle($this->color_array);
+
+    // Shift the first item off of the newly shuffled array.
+    $color = array_shift($this->color_array);
+
+    // Get a random value for the width and height.
+    $width = rand($this->width_min, $this->width_max);
+    $height = rand($this->height_min, $this->height_max);
 
     $ret = '<li>'
          . '<div class="Image">'
