@@ -23,7 +23,9 @@
 
 class Display {
 
-  private $color_array_source = array('blue', 'gray', 'green', 'orange', 'purple', 'red');
+  // private $color_array_source = array('blue', 'gray', 'green', 'orange', 'purple', 'red');
+  private $color_array_source = array('#D8DDCE', '#C1D1BF', '#A5BFAA', '#7FA08C', '#5B8772', '#21543F', '#0C3026');
+  // private $color_array_source = array('#272231', '#3E2E40', '#5A4055', '#805F73', '#A4788D', '#DEABC0', '#F3CFD9');
   private $color_array = array();
 
   private $width_min = 100;
