@@ -60,15 +60,18 @@ class Display {
     $width = rand($this->width_min, $this->width_max);
     $height = rand($this->height_min, $this->height_max);
 
+    $text = '<div class="HiddenText">'
+          . '<p><i>Hello</i>, world!</p>'
+          . '</div><!-- .HiddenText -->'
+          ;
+
     $ret = '<li>'
          . '<div class="Image">'
          . '<div class="Padding">'
          . '<a href="http://www.preworn.com/">'
          . sprintf('<img src="images/pixel_%s.gif" width="%d" height="%d" alt="" />', $color, $width, $height)
          . '</a>'
-         . '<div class="HiddenText">'
-         . '<p><i>Hello</i>, world!</p>'
-         . '</div><!-- .HiddenText -->'
+         . $text
          . '</div><!-- .Padding -->'
          . '</div><!-- .Image -->'
          . '</li>'
