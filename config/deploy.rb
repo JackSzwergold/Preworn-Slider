@@ -2,6 +2,7 @@
 lock '3.4.0'
 
 set :application, 'preworn_slider'
+set :short_name, 'slider'
 set :repo_url, 'git@github.com:JackSzwergold/Preworn-Slider.git'
 
 # Set the 'deploy_to' directory.
