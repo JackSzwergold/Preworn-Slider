@@ -22,7 +22,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('BASE_PATH', '/Preworn-Slider/');
 }
 else {
-  define('BASE_PATH', '/slider/');
+  define('BASE_PATH', '/art/slider/');
 }
 
 /**************************************************************************************************/
