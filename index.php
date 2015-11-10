@@ -47,6 +47,10 @@ $DisplayClass = new Display();
 $body = $DisplayClass->set_body_content(144);
 
 //**************************************************************************************//
+// Set the page base.
+$page_base = BASE_URL;
+
+//**************************************************************************************//
 // Init the "frontendDisplay()" class.
 
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
@@ -60,6 +64,10 @@ $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 // $frontendDisplayClass->setPageDivWrapper('carouselFrame', 'carousel');
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavascripts($JAVASCRIPTS_ARRAY);
+$frontendDisplayClass->setPageBase($page_base);
+// $frontendDisplayClass->setPageURLParts($markdown_parts);
+// $frontendDisplayClass->setAmazonInfo($AMAZON_INFO);
+// $frontendDisplayClass->setPayPalInfo($PAYPAL_INFO);
 $frontendDisplayClass->initContent();
 
 ?>
