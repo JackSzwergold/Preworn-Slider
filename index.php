@@ -36,46 +36,9 @@ $DEBUG_OUTPUT_JSON = false;
 //**************************************************************************************//
 // Set the mode.
 
-$mode = 'shortlist';
-$mode = 'mediumlist';
+// $mode = 'shortlist';
+// $mode = 'mediumlist';
 $mode = 'longlist';
-
-//**************************************************************************************//
-// Get the URL param & set the markdown file as well as the page title.
-
-// Init the arrays.
-$url_parts = array();
-$markdown_parts = array();
-$title_parts = array('Slider');
-
-// Parse the '$_GET' parameters.
-foreach($VALID_GET_PARAMETERS as $get_parameter) {
-  $$get_parameter = '';
-  if (array_key_exists($get_parameter, $_GET) && !empty($_GET[$get_parameter])) {
-    if (in_array($get_parameter, $VALID_GET_PARAMETERS)) {
-      $$get_parameter = $_GET[$get_parameter];
-    }
-  }
-}
-
-// Set the controller.
-if (!empty($colorspace)) {
-  $url_parts[] = $colorspace;
-  $title_parts[] = strtoupper($colorspace);
-}
-
-// Set the page.
-if (!empty($colorspace) && !empty($value)) {
-  $url_parts[] = $value;
-  $title_parts[] = $value;
-}
-
-// Set the page title.
-$page_title = join(' / ', $title_parts);
-$page_title = ucwords(preg_replace('/_/', ' ', $page_title));
-
-// Set the page base.
-$page_base = BASE_URL;
 
 //**************************************************************************************//
 // Init the display class and get the values.
@@ -84,25 +47,19 @@ $DisplayClass = new Display();
 $body = $DisplayClass->set_body_content(144);
 
 //**************************************************************************************//
-// Set the page DIVs array.
-
-$page_divs_array = array();
-
-//**************************************************************************************//
 // Init the "frontendDisplay()" class.
 
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode($mode);
-$frontendDisplayClass->setPageTitle($page_title);
-$frontendDisplayClass->setPageURL('http://www.preworn.com/slider/' . implode($url_parts, '/'));
-$frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.');
-$frontendDisplayClass->setPageDescription('Some PHP classes to handle slider display stuff.');
+$frontendDisplayClass->setPageTitle($SITE_TITLE);
+$frontendDisplayClass->setPageURL($SITE_URL);
+$frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
+$frontendDisplayClass->setPageDescription('A simple slider I created which works well on desktop as well as mobile browsers using jQuery and CSS3 WebKit commands.');
 $frontendDisplayClass->setPageContent($body);
-$frontendDisplayClass->setPageDivs($page_divs_array);
+$frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 // $frontendDisplayClass->setPageDivWrapper('carouselFrame', 'carousel');
-$frontendDisplayClass->setPageRobots('noindex, nofollow');
-$frontendDisplayClass->setJavascripts(array('script/iscroll.js','script/preworn.helpers.js','script/preworn.slider.js','script/preworn.slider.settings.iscroll.js','script/preworn.slider.init.js'));
-$frontendDisplayClass->setPageBase($page_base);
+$frontendDisplayClass->setPageRobots($SITE_ROBOTS);
+$frontendDisplayClass->setJavascripts($JAVASCRIPTS_ARRAY);
 $frontendDisplayClass->initContent();
 
 ?>
