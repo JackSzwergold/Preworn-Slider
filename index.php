@@ -58,7 +58,7 @@ $frontendDisplayClass->setViewMode($mode);
 $frontendDisplayClass->setPageTitle($SITE_TITLE);
 $frontendDisplayClass->setPageURL($SITE_URL);
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
-$frontendDisplayClass->setPageDescription('A simple slider I created which works well on desktop as well as mobile browsers using jQuery and CSS3 WebKit commands.');
+$frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageContent($body);
 $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 // $frontendDisplayClass->setPageDivWrapper('carouselFrame', 'carousel');

@@ -30,7 +30,7 @@ else {
 
 // Site descriptive info.
 $SITE_TITLE = 'Slider';
-$SITE_DESCRIPTION = 'Some PHP classes to handle slider display stuff.';
+$SITE_DESCRIPTION = 'A simple slider I created which works well on desktop as well as mobile browsers using jQuery and CSS3 WebKit commands.';
 $SITE_URL = 'http://www.preworn.com/slider/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
