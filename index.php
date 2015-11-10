@@ -78,15 +78,15 @@ $page_title = ucwords(preg_replace('/_/', ' ', $page_title));
 $page_base = BASE_URL;
 
 //**************************************************************************************//
-// Set the page DIVs array.
-
-$page_divs_array = array();
-
-//**************************************************************************************//
 // Init the display class and get the values.
 
 $DisplayClass = new Display();
 $body = $DisplayClass->set_body_content(144);
+
+//**************************************************************************************//
+// Set the page DIVs array.
+
+$page_divs_array = array();
 
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
