@@ -12,16 +12,18 @@
  * w: http://www.preworn.com
  * e: me@preworn.com
  *
- * Created: 2015-04-29, js
- * Version: 2015-04-29, js: creation
- *          2015-04-29, js: development & cleanup
- *          2015-04-30, js: development & cleanup
- *          2015-05-03, js: setting more configuration and structure stuff
+ * Created: 2014-01-20, js
+ * Version: 2014-01-20, js: creation
+ *          2014-01-20, js: development & cleanup
+ *          2014-02-16, js: adding configuration settings
+ *          2014-02-16, js: adding controller logic
+ *          2014-02-17, js: setting a 'base'
+ *          2014-03-02, js: adding a better page URL
  *
  */
 
 //**************************************************************************************//
-// Require the basic classes & functions.
+// Require the basic configuration settings & functions.
 
 require_once 'conf/conf.inc.php';
 require_once BASE_FILEPATH . '/common/functions.inc.php';
