@@ -24,31 +24,18 @@
 // Require the basic classes & functions.
 
 require_once 'conf/conf.inc.php';
-require_once 'common/functions.inc.php';
-require_once 'lib/frontendDisplay.class.php';
-require_once 'lib/slider_display.class.php';
-
-//**************************************************************************************//
-// Set config options.
-
-$DEBUG_OUTPUT_JSON = false;
-
-//**************************************************************************************//
-// Set the mode.
-
-// $mode = 'shortlist';
-// $mode = 'mediumlist';
-$mode = 'longlist';
-
-//**************************************************************************************//
-// Init the display class and get the values.
-
-$DisplayClass = new Display();
-$body = $DisplayClass->set_body_content(144);
+require_once BASE_FILEPATH . '/common/functions.inc.php';
+require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
+require_once BASE_FILEPATH . '/lib/frontendDisplayHelpers.php';
 
 //**************************************************************************************//
 // Set the page base.
-$page_base = BASE_URL;
+if (FALSE && !empty($controller)) {
+  $page_base = BASE_URL . $controller . '/';
+}
+else {
+  $page_base = BASE_URL;
+}
 
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
