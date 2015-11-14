@@ -26,9 +26,9 @@ require_once BASE_FILEPATH . '/lib/slider_display.class.php';
 //**************************************************************************************//
 // Set the mode.
 
-// $mode = 'shortlist';
-// $mode = 'mediumlist';
-$mode = 'longlist';
+// $VIEW_MODE = 'shortlist';
+// $VIEW_MODE = 'mediumlist';
+$VIEW_MODE = 'longlist';
 
 //**************************************************************************************//
 // Init the display class and get the values.
