@@ -55,6 +55,7 @@ $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
 $frontendDisplayClass->setCSSItems($CSS_ITEMS);
+$frontendDisplayClass->setFaviconItems($FAVICONS);
 $frontendDisplayClass->setPageBase($page_base);
 // $frontendDisplayClass->setPageURLParts($markdown_parts);
 // $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
