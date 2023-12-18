@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock ['>= 3.17.0', '< 3.18.0']
 
 set :application, 'preworn_slider'
 set :short_name, 'slider'
